@@ -1,5 +1,4 @@
 line-bot-sdk
 flask
 janome
-json
 re
