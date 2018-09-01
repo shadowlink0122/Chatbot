@@ -59,7 +59,7 @@ def word_choice(sel):
   return random.choice(list(keys))
 
 def make_reply(text):
-  if text[-1] != "。": text += "。"
+  if text[-1] != "。" or text[-1] != "？" or text[-1] != "！": text += "。"
   words = tokenizer.tokenize(text)
   register_dic(words)
 
