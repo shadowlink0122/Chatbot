@@ -1,7 +1,5 @@
 line-bot-sdk
 flask
 janome
-os
-re
 json
-random
+re
