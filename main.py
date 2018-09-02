@@ -3,6 +3,7 @@ from linebot.models import (TextSendMessage, )
 import botengine
 
 def create_message(input):
+<<<<<<< HEAD
   message = ''
 
   # for word in love:
@@ -18,3 +19,8 @@ def create_message(input):
     message = botengine.make_reply(input)
 
   return TextSendMessage(text=message)
+=======
+    message = botengine.make_reply(input)
+
+    return TextSendMessage(text=message)
+>>>>>>> 5a9efa352a49547fd9b8e966fa541ebc1215c55e
