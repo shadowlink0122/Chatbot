@@ -4,7 +4,7 @@ import botengine
 
 def create_message(input):
 
-  message = botengine.make_reply(input)
+  # message = botengine.make_reply(input)
   message = "Test Message\nMaintenance now"
 
   if message == "":
