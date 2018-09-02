@@ -1,5 +1,5 @@
 from janome.tokenizer import Tokenizer
-import os, re, json, random
+import os, re, random
 
 # dict_file = "chatbot-data.json"
 dic = {}
