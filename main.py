@@ -5,9 +5,6 @@ import botengine
 def create_message(input):
 
   # message = botengine.make_reply(input)
-  message = "Test Message\nMaintenance now"
-
-  if message == "":
-  	message = "Error : なんでだろう🤔\n				整備中です🙇‍♀️"
+  message = "Test Message\n" + input
 
   return TextSendMessage(text=message)
