@@ -14,6 +14,7 @@ def create_message(input):
             message = 'は？ふざけんなよ！！'
 
     if len(message) == 0:
-        message = botengine.make_reply(input)
+        # message = botengine.make_reply(input)
+        message = input + "..."
 
     return TextSendMessage(text=message)
