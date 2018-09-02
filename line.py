@@ -22,7 +22,6 @@ from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 import main
-import botengine as bt
 
 app = Flask(__name__, static_folder='images')
 
