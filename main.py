@@ -1,12 +1,19 @@
 import random
 from linebot.models import (TextSendMessage, )
-import botengine as bt
+import botengine
 
 def create_message(input):
-	message = ""
-  # message = tb.make_reply(input)
+    message = ''
 
-  if len(message) < 1:
-  	message = "Error"
+    for word in love:
+        if input.find(word) >= 0:
+            message = 'だよね。寺子屋大好き❤️'
 
-  return TextSendMessage(text=input)
+    for word in unlove:
+        if input.find(word) >= 0:
+            message = 'は？ふざけんなよ！！'
+
+    if len(message) == 0:
+        message = botengine.make_reply(input)
+
+    return TextSendMessage(text=message)
