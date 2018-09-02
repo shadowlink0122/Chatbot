@@ -8,21 +8,6 @@ def create_message(input):
     jankenstart = ['じゃんけん', 'ジャンケン']
     message = ''
 
-    for word in love:
-        if input.find(word) >= 0:
-            message = 'だよね。寺子屋大好き❤️'
-
-    for word in unlove:
-        if input.find(word) >= 0:
-            message = 'は？ふざけんなよ！！'
-
-    for word in jankenstart:
-        if input.find(word) >= 0 or janken_flag ==1:
-            if janken_flag != 1:
-                message = 'グー・チョキ・パーのどれかを入力してね'
-            else:
-                janken_message(input)
-
     if len(message) == 0:
         message = input + '、と言いましたね？'
 
