@@ -6,6 +6,6 @@ def create_message(input):
     message = ''
 
     if len(message) == 0:
-        message = input + '...'
+        message = '今はやめて...'
 
     return TextSendMessage(text=message)
