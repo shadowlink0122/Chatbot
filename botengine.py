@@ -1,6 +1,7 @@
 from janome.tokenizer import Tokenizer
 import os, re, json, random
 
+dict_file = "chatbot-data.json"
 dic = {}
 tokenizer = Tokenizer()
 
@@ -17,9 +18,11 @@ def register_dic(words):
     if len(tmp) > 3: tmp = tmp[1:]
     set_word3(dic, tmp)
 
-    if word == "。" or word == "？" or word == "?":
+    if word == "。" or word == "?":
       tmp = ["@"]
       continue
+  
+  # json.dump(dic, open(dict_file, "w", encoding = "utf-8"))
 
 def set_word3(dic, s3):
   w1, w2, w3 = s3
@@ -46,7 +49,7 @@ def make_sentence(head):
       w3 = ""
     ret.append(w3)
 
-    if w3 == "。" or w3 == "？" or or word == "?" or w3 == "": break
+    if w3 == "。" or w3 == "?" or w3 == "": break
     w1, w2 = w2, w3
   
   return "".join(ret)
@@ -56,7 +59,7 @@ def word_choice(sel):
   return random.choice(list(keys))
 
 def make_reply(text):
-  if text[-1] != "。" or text[-1] != "？" or or word == "?" or text[-1] != "！": text += "。"
+  if text[-1] != "。" or text[-1] != "？" or text[-1] != "！": text += "。"
   words = tokenizer.tokenize(text)
   register_dic(words)
 
@@ -69,3 +72,6 @@ def make_reply(text):
       if face in dic: return make_sentence(face)
   
   return make_sentence("@")
+
+# if os.path.exists(dict_file):
+#   dic = json.load(open(dict_file, "r"))

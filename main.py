@@ -1,6 +1,6 @@
 import random
 from linebot.models import (TextSendMessage, )
-import botengine
+import botengine as bt
 
 def create_message(input):
     love = ['好き', 'すき', 'スキ']
