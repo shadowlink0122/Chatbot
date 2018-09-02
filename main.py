@@ -1,9 +1,10 @@
 import random
 
 from linebot.models import (TextSendMessage, )
-import botengine
+import botengine as bt
 
 def create_message(comment):
-    message = make_reply(comment)
+
+    message = tb.make_reply(comment)
 
     return TextSendMessage(text=message)

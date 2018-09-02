@@ -1,6 +1,5 @@
 from janome.tokenizer import Tokenizer
 import os, re, json, random
-# from pymongo import MongoClient
 
 # dict_file = "chatbot-data.json"
 dic = {}
@@ -24,7 +23,6 @@ def register_dic(words):
       continue
   
   # json.dump(dic, open(dict_file, "w", encoding = "utf-8"))
-  # co.insert_one(dic)
 
 def set_word3(dic, s3):
   w1, w2, w3 = s3
@@ -75,14 +73,5 @@ def make_reply(text):
   
   return make_sentence("@")
 
-# -- main --
-
-# client = pymongo.MongoClient('localhost', 27017)
-# db = client.chatbot_data
-# co = db.my_collection
-
-# for data in co.find():
-#     dic.append(data)
-
-
-
+# if os.path.exists(dict_file):
+#   dic = json.load(open(dict_file, "r"))
