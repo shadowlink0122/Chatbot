@@ -30,7 +30,7 @@ def set_word3(dic, s3):
 	if not w2 in dic[w1]: dic[w1][w2] = {}
 	if not w3 in dic[w1][w2]: dic[w1][w2][w3] = 0
 
-		dic[w1][w2][w3] += 1
+	dic[w1][w2][w3] += 1
 
 def make_sentence(head):
 	if not head in dic: return ""
