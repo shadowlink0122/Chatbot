@@ -1,7 +1,7 @@
 from janome.tokenizer import Tokenizer
 import os, re, json, random
 
-dict_file = "chatbot-data.json"
+# dict_file = "chatbot-data.json"
 dic = {}
 tokenizer = Tokenizer()
 
@@ -18,7 +18,7 @@ def register_dic(words):
     if len(tmp) > 3: tmp = tmp[1:]
     set_word3(dic, tmp)
 
-    if word == "。" or word == "?":
+    if word == "。" or word == "？":
       tmp = ["@"]
       continue
   
@@ -49,7 +49,7 @@ def make_sentence(head):
       w3 = ""
     ret.append(w3)
 
-    if w3 == "。" or w3 == "?" or w3 == "": break
+    if w3 == "。" or w3 == "？" or w3 == "": break
     w1, w2 = w2, w3
   
   return "".join(ret)
