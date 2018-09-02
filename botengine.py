@@ -22,7 +22,7 @@ def register_dic(words):
       tmp = ["@"]
       continue
   
-  json.dump(dic, open(dict_file, "w", encoding = "utf-8"))
+  # json.dump(dic, open(dict_file, "w", encoding = "utf-8"))
 
 def set_word3(dic, s3):
   w1, w2, w3 = s3
@@ -73,5 +73,5 @@ def make_reply(text):
   
   return make_sentence("@")
 
-if os.path.exists(dict_file):
-  dic = json.load(open(dict_file, "r"))
+# if os.path.exists(dict_file):
+#   dic = json.load(open(dict_file, "r"))
