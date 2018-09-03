@@ -1,7 +1,6 @@
 from janome.tokenizer import Tokenizer
 import random
 
-dict_file = "chatbot-data.json"
 dic = {}
 tokenizer = Tokenizer()
 
@@ -21,8 +20,6 @@ def register_dic(words):
 		if word == "。" or word == "?":
 			tmp = ["@"]
 			continue
-  
-  # json.dump(dic, open(dict_file, "w", encoding = "utf-8"))
 
 def set_word3(dic, s3):
 	w1, w2, w3 = s3
