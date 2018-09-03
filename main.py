@@ -2,7 +2,7 @@ from linebot.models import (TextSendMessage, )
 # import botengine
 
 def create_message(input):
-	message = "Herokuに俺の居場所はないんや..."
+	message = "ほんと...?\nでも俺、プロセス終了したら記憶喪失になってしまう。\nこんなbot需要ないんや..."
 		
 	# message = botengine.make_reply(input)
 
