@@ -2,7 +2,7 @@ from linebot.models import (TextSendMessage, )
 # import botengine
 
 def create_message(input):
-	message = ""
+	message = "俺もうダメかもしん..."
 		
 	# message = botengine.make_reply(input)
 
