@@ -7,6 +7,6 @@ def create_message(input):
 	# message = botengine.make_reply(input)
 
 	if len(message) == 0:
-		message = 'ただ今メンテナンス中です\n改装が整うまでお待ちください'
+		message = 'テスト中です'
 
 	return TextSendMessage(text=message)
