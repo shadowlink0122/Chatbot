@@ -1,1 +1,1 @@
-web: python line.py
+web: python3 line.py
