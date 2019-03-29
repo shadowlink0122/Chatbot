@@ -1,10 +1,13 @@
-from linebot.models import (TextSendMessage, )
-import botengine
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-def create_message(input):
+from linebot.models import (TextSendMessage, )
+from botengine import make_reply
+
+def create_message(text_message):
 	message = ""
 		
-	message = botengine.make_reply(input)
+	# message = make_reply(text_message)
 
 	if len(message) == 0:
 		message = 'テスト中です'
